@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # 64 chars
 blob = """
-€B¥#`„XCâ‚ˆì€ÿ€ßB‚k›Ž:æyòÎ&Ÿõã°áj(}Ãjn2›•Tù·Qiwú4ÍjPj¨¦ÝR˜V7ÿÉ(êÐylº]ˆÂZHáõ!”)9Þ„™ãË_ëA¡ÜÈŽQr,¤ë˜­0`1+˜KOnµà©n2j'V"""
+€B¥#`„XCâ‚ˆì€ÿ€ßB‚ë›Ž:æyòÎ&Ÿõã°áj(}Ãjn2›Uù·Qiwú4ÍjPj¨&ÝR˜V7ÿÉ(êÐylº]ˆÂZHáõ!)9Þ„™ãË_ëA¡ÜÈŽQr,¤ë˜­°_1+˜KOnµà©n²j'V"""
 if blob == """
 €B¥#`„XCâ‚ˆì€ÿ€ßB‚k›Ž:æyòÎ&Ÿõã°áj(}Ãjn2›•Tù·Qiwú4ÍjPj¨¦ÝR˜V7ÿÉ(êÐylº]ˆÂZHáõ!”)9Þ„™ãË_ëA¡ÜÈŽQr,¤ë˜­0`1+˜KOnµà©n2j'V""":
 	print "I come in peace."
