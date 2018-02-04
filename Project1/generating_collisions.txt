@@ -1,5 +1,5 @@
 # Question 1
-time_for_fastcoll 2.62283 s
+2.62283 s
 
 # Question 2
 file1:
@@ -17,7 +17,6 @@ bb9857e3a5d13f8b
 
 
 # Question 3
-md5_hash    
 649fe6a19f0bc8542b09475d632fca35
 
 # Question 4
