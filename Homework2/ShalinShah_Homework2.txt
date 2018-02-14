@@ -1,0 +1,44 @@
+#Problem 1:
+key=BOULDER
+
+I used the method in question 2e to solve this problem. I started with key length 2 and incremented the key length, till the mean
+population variance comes closer to the population variance of English.
+The population variance for 7 letters come to something around 11 which is close enough to English.
+Then performing frequency analysis for each letter and a lot of trial and error with pen and paper, I got BOULDER as a probable key.
+
+Testing this key, the decoded plaintext is
+CRYPTOGRAPHYISTHEPRACTICEANDSTUDYOFTECHNIQUESFORSECURECOMMUNICATIONINTHEPRESENCEOFTHIRDPARTIESCALLEDADVERSARIESMOREGENERALLYITISABOUTCONSTRUCTINGANDANALYZINGPROTOCOLSTHATOVERCOMETHEINFLUENCEOFADVERSARIESANDWHICHARERELATEDTOVARIOUSASPECTSININFORMATIONSECURITYSUCHASDATACONFIDENTIALITYDATAINTEGRITYAUTHENTICATIONANDNONREPUDIATIONMODERNCRYPTOGRAPHYINTERSECTSTHEDISCIPLINESOFMATHEMATICSCOMPUTERSCIENCEANDELECTRICALENGINEERINGMODERNCRYPTOGRAPHYISHEAVILYBASEDONMATHEMATICALTHEORYANDCOMPUTERSCIENCEPRACTICECRYPTOGRAPHICALGORITHMSAREDESIGNEDAROUNDCOMPUTATIONALHARDNESSASSUMPTIONSMAKINGSUCHALGORITHMSHARDTOBREAKINPRACTICEBYANYADVERSARYITISTHEORETICALLYPOSSIBLETOBREAKSUCHASYSTEMBUTITISINFEASIBLETODOSOBYANYKNOWNPRACTICALMEANSCRYPTOLOGYRELATEDTECHNOLOGYHASRAISEDANUMBEROFLEGALISSUESTHEELECTRONICFRONTIERFOUNDATIONWASINVOLVEDINACASEINTHEUNITEDSTATESWHICHQUESTIONEDWHETHERREQUIRINGSUSPECTEDCRIMINALSTOPROVIDETHEIRDECRYPTIONKEYSTOLAWENFORCEMENTISUNCONSTITUTIONALTHEEFFARGUEDTHATTHISISAVIOLATIONOFTHERIGHTOFNOTBEINGFORCEDTOINCRIMINATEONESELFASGIVENINTHEFIFTHAMENDM
+parte.c was used for frequency analysis and partc.c was modified to generate the decoded string
+
+#Problem 2:
+part_a_var_english=10.186098%
+part_b_var_plaintext=9.946636%
+part_c_var_ciphertexts=[5.081270%, 3.077249%, 2.355382%, 1.582482%, 1.402095%]
+part_c_explain="The population variances decrease as the length of the key increases. 
+This would mean that the ciphertext is becoming less random and thus it is easier to predict the sequence"
+part_d_means=[10.247699%, 10.636364%, 10.868924%, 11.493681%, 11.568287%]
+part_d_explain="The mean variance is very much like part(b). It is not decreasing like part(c). 
+I guess this is because we are considering the strings as Caesar ciphers, each alphabet is being 
+shift equally and thus the variance still remains the same. This also means that if one is using 
+Caesar’s cipher to encode a plaintext, we can decode the ciphertext just by performing frequency analysis on the data string"
+part_e_means=[3.832353%, 4.783972%, 4.535586%, 3.332469%]
+part_e_explain="It was difficult to imagine the expected outputs for this part, but seeing the results explains a lot. 
+This method is indeed a variation to the Kasiski method. Instead of finding repeating patterns in the data string, 
+we can treat the stream as k independent Caesar ciphers as done in part(d). Calculating the mean population variance 
+and relating it to the population variance of English text, we can find out the length of the key. The mean population 
+variance is similar when the guessed key length is 6 or 12 and I guess it would be similar for the next multiples of 
+6 which are smaller than the length of the string. Thus, the key is most probably the smaller number."
+
+----
+For Part A: Run the code parta.c. The decimal percentages are multiplied by 1000 for eliminating decimals and finally that is adjusted in the printf
+----
+For Part B: Run the code partb.c. The occurrences of each letter is calculated first and then the percentage is calculated to keep the math 
+similar to part a
+----
+For Part C: Run the code partc.c. The code encrypts the plaintext using all the keys and also shows the occurrences and 
+population variance for each case
+----
+For Part D: Run the code partd.c. I modified the lines 25 and 48 to get the population variance for a particular character in each key. 
+Finally using a calculator, I calculated the mean population variance for each key.
+----
+For Part E: Run the code parte.c. I modified the line 48 to get the population variance for each case.
